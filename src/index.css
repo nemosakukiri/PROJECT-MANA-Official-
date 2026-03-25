@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Public+Sans:wght@400;700&display=swap');
+
+@theme {
+  --font-headline: "Noto Serif JP", serif;
+  --font-body: "Public Sans", sans-serif;
+
+  --color-surface: #fdf9f4;
+  --color-on-surface: #1c1c19;
+  --color-primary: #1a1a2e;
+  --color-secondary: #b02d21;
+  --color-surface-container-low: #f7f3ee;
+  --color-surface-container-high: #ebe8e3;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body antialiased;
+    line-height: 1.8;
+  }
+
+  * {
+    @apply rounded-none!;
+  }
+}
+
+@layer components {
+  .section-border {
+    @apply border-l-2 border-primary pl-8 mb-16;
+  }
+
+  .alert-box {
+    @apply bg-[#f5e6e5] border-l-8 border-secondary p-8 my-10;
+  }
+}
